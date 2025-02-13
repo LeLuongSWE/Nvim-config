@@ -8,7 +8,6 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.8',
-		
 		-- or                            , branch = '0.1.x',
 		-- pv pv   
 		requires = { {'nvim-lua/plenary.nvim'} }
@@ -20,12 +19,16 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme dracula-soft')
 		end
 	})
-	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) 
+	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use ('nvim-treesitter/playground')
 	use ('theprimeagen/harpoon')
 	use ('mbbill/undotree')
 	use ('tpope/vim-fugitive')
 
-
+	use 'mfussenegger/nvim-dap'
+	use 'mfussenegger/nvim-jdtls'
+	use({'neovim/nvim-lspconfig'})
+	use({'hrsh7th/nvim-cmp'})
+	use({'hrsh7th/cmp-nvim-lsp'})
 end)
 
