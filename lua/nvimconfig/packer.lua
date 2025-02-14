@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme dracula-soft')
 		end
 	})
+	use "nvim-telescope/telescope-dap.nvim"
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use ('nvim-treesitter/playground')
 	use ('theprimeagen/harpoon')
@@ -30,5 +31,21 @@ return require('packer').startup(function(use)
 	use({'neovim/nvim-lspconfig'})
 	use({'hrsh7th/nvim-cmp'})
 	use({'hrsh7th/cmp-nvim-lsp'})
+	use 'hrsh7th/cmp-vsnip'
+	use 'hrsh7th/vim-vsnip'
+	use {"williamboman/mason.nvim"}
+	use {"williamboman/mason-lspconfig.nvim"}
+	use {"onsails/lspkind.nvim"}
+	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+	use 'simrat39/symbols-outline.nvim'
+	use 'nvim-tree/nvim-tree.lua'
+	use 'nvim-tree/nvim-web-devicons'
+	use 'nvim-lualine/lualine.nvim'
+	use {
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup {}
+		end,
+	}
 end)
 
