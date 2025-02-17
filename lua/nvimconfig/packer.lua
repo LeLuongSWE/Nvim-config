@@ -47,5 +47,12 @@ return require('packer').startup(function(use)
 			require("nvim-autopairs").setup {}
 		end,
 	}
+	use {"mxsdev/nvim-dap-vscode-js"}
+	use { "rcarriga/nvim-dap-ui" }
+	use { "nvim-neotest/nvim-nio" }
+	use { "lervag/vimtex",  config = function ()
+		vim.g.vimtex_view_method = "zathura"
+	end}
+
 end)
 

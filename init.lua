@@ -1,4 +1,5 @@
 require('nvimconfig.remap')
+require('lsp')
 require('lspconfig').lua_ls.setup({
 	autostart = true
 })
@@ -11,9 +12,9 @@ require('lspconfig').html.setup({
 require('lspconfig').cssls.setup({
 	autostart = true
 })
-require('lspconfig').css_variables.setup({
+ require('lspconfig').css_variables.setup({
 	autostart = true
-})
+ })
 require('lspconfig').cssmodules_ls.setup({
 	autostart = true
 })
@@ -53,4 +54,9 @@ require("nvim-tree").setup({
 require('lualine').setup {
 	options = { theme = 'onedark' },
 }
+-- relative number
+vim.cmd("set rnu")
+vim.cmd("set nu")
+vim.o.clipboard = 'unnamedplus'
+
 
